@@ -1,4 +1,0 @@
-/home/pbarbeira/dev/tools/CLion-2023.1/bin/cmake/linux/x64/bin/cmake -S /home/pbarbeira/dev/code/cpp/regex-matcher -B /home/pbarbeira/dev/code/cpp/regex-matcher
--- Configuring done (0.0s)
--- Generating done (0.0s)
--- Build files have been written to: /home/pbarbeira/dev/code/cpp/regex-matcher

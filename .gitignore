@@ -1,0 +1,6 @@
+rgxm
+cmake*
+CMakeFiles/
+Makefile
+Testing/
+CMakeCache.txt
