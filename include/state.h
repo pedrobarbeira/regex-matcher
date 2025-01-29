@@ -10,8 +10,9 @@ class State{
 		bool _endState;
 		std::unordered_map<char, std::shared_ptr<State>> _transitions;
 	public:
-		void add_transition(const char& symbol, std::unique_ptr<State> nextState);
+		explicit State(bool endState = false);
 		
+		void add_transition(const char& symbol, std::unique_ptr<State> nextState);
 		std::shared_ptr<State> process_input(const char& symbol);
 };
 

@@ -13,9 +13,27 @@ std::unique_ptr<State> Parser::parse(const std::string& expr){
 		};
 	}
 
-	return std::make_unique<State>();
+	return this->_rootExpr->buildStateMachine();
 }
 
 void Parser::_buildSquareBracketExpr(){
-	throw ExprException("Invalid expression");
+	std::string literal = this->_stack.top();
+	this->_stack.pop();
+	std::string op1 = this->_stack.top();
+	this->_stack.pop();
+	if(op1 == "^"){
+		std::string op2 = this->_stack.top();
+		this->_stack.pop();
+		if(op2 != "["){
+			throw ExprException("Invalid expression");
+		}
+		this->_rootExpr = std::make_unique<Expr>("bracketNegateExpr");
+	}else{
+		if(op1 != "["){
+			throw ExprException("Invalid expression");
+		}
+		this->_rootExpr = std::make_unique<Expr>("bracketExpr");
+	}
+	auto literalExpr = std::make_unique<Expr>("literalExpr", literal);
+	this->_rootExpr->add_children(std::move(literalExpr));
 }
