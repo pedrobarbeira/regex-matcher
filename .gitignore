@@ -4,3 +4,6 @@ CMakeFiles/
 Makefile
 Testing/
 CMakeCache.txt
+.cmak/
+.idea/
+*.swp
