@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/rgxm.dir/main.cpp.o "CMakeFiles/rgxm.dir/src/regex-matcher.cpp.o" CMakeFiles/rgxm.dir/src/state.cpp.o CMakeFiles/rgxm.dir/src/parser.cpp.o CMakeFiles/rgxm.dir/src/tokenizer.cpp.o "CMakeFiles/rgxm.dir/src/regex-builder.cpp.o" CMakeFiles/rgxm.dir/src/expr.cpp.o -o rgxm
